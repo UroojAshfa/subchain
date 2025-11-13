@@ -8,25 +8,25 @@ dotenv.config();
 const app = express();
 app.use(
   cors({
-    origin: "*", // 🔒 TODO: restrict to your frontend in production
+    origin: "*", 
     methods: ["GET", "POST"],
   })
 );
 app.use(express.json());
 
-// === 🌍 Environment Variables ===
+
 const ELEVENLABS_API_KEY = process.env.ELEVENLABS_API_KEY;
 const ELEVENLABS_VOICE_ID = process.env.ELEVENLABS_VOICE_ID;
 const AIML_API_KEY = process.env.AIML_API_KEY;
 
-// === ⚙️ Validation ===
+//  Validation 
 if (!ELEVENLABS_API_KEY || !ELEVENLABS_VOICE_ID)
   console.warn("⚠️ Missing ElevenLabs API credentials. Voice generation disabled.");
 
 if (!AIML_API_KEY)
   console.warn("⚠️ Missing AIML API key. AI Assistant replies disabled.");
 
-// === 🧩 Utility: Generate human-friendly messages ===
+//Generate messages
 function generateMessage(action, address) {
   const user = address ? address.slice(0, 6) : "User";
   switch (action) {
@@ -47,7 +47,7 @@ function generateMessage(action, address) {
   }
 }
 
-// === 🧠 AI Assistant (Chat) Endpoint ===
+// AI Assistant 
 app.post("/ask-ai", async (req, res) => {
   try {
     const { query } = req.body;
@@ -88,16 +88,16 @@ app.post("/ask-ai", async (req, res) => {
       data?.choices?.[0]?.message?.content?.trim() ||
       "⚠️ Sorry, I couldn’t generate a response.";
 
-    console.log("🧠 AI Reply:", reply);
+    console.log(" AI Reply:", reply);
     res.json({ reply });
   } catch (err) {
-    console.error("⚠️ AIML /ask-ai error:", err);
+    console.error(" AIML /ask-ai error:", err);
     res.status(500).json({ reply: "⚠️ Assistant unavailable right now." });
   }
 });
 
 
-// === 🗣️ Text-to-Speech Endpoint ===
+// Text-to-Speech 
 app.post("/speak", async (req, res) => {
   try {
     const { text, action, address } = req.body;
@@ -147,7 +147,7 @@ app.post("/speak", async (req, res) => {
   }
 });
 
-// === 💳 Subscriptions Endpoint (Demo) ===
+
 const mockSubscriptions = {
   "0x123abc": [
     { name: "Dreamster Music", status: "active", renews: "2025-12-01" },
@@ -164,13 +164,13 @@ app.get("/subscriptions/:address", (req, res) => {
   res.json({ address, subscriptions: subs });
 });
 
-// === 🧭 Health Check ===
+
 app.get("/", (req, res) => {
   res.send("✅ Dreamster AI + Voice Server is running");
 });
 
-// === 🚀 Start Server ===
+// Start 
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () =>
-  console.log(`🎙️ Dreamster server running on http://localhost:${PORT}`)
+  console.log(`🎙️ Subchain server running on http://localhost:${PORT}`)
 );
