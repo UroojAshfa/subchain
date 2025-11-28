@@ -1,5 +1,12 @@
 # 🚀 AI Subscription Manager
-## Smart, Automated, On-Chain Subscription Management with AI-Powered Billing & Voice Interaction
+### Smart, Automated, On-Chain Subscription Management with AI-Powered Billing & Voice Interaction
+
+### 🌟 Video Demo
+
+📹 Deployment pending — but you can still showcase your work.
+Upload a screen recording to YouTube, Loom, or Google Drive, then paste the link below:
+
+👉 Demo Video: [Add your link here]
 
 ## 🧩 1. Project Summary
 
@@ -217,6 +224,6 @@ Start: node server.js
 4. Add environment variables
 5. Deploy
 
-## 🤝 12. Contributions
+## 🤝 11. Contributions
 
 Pull requests and feature ideas are welcome.
