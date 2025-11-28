@@ -1,6 +1,7 @@
 # 🚀 AI Subscription Manager
 ### Smart, Automated, On-Chain Subscription Management with AI-Powered Billing & Voice Interaction
 
+
 ### 🌟 Video Demo
 
 📹 Deployment pending — but you can still showcase your work.
