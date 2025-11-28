@@ -65,9 +65,41 @@ To demonstrate how AI + Blockchain + Modern Frontend can fully automate subscrip
 ### Clone the Repository
 
 ```
+git clone https://github.com/UroojAshfa/subchain.git
+cd subchain
+```
+
+### Backend Setup
+
+```
 cd backend
 npm install
 npm run dev
+
 ```
 
-Foundry contracts locally tested
+or: 
+```
+node server.js
+```
+
+### Frontend Setup
+
+```
+cd web
+npm install
+npm run dev
+
+```
+
+Open the app at:
+
+```
+[cd web
+npm install
+npm run dev
+](http://localhost:3000
+)
+```
+
+
