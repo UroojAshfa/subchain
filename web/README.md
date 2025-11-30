@@ -7,7 +7,7 @@
 📹 Deployment pending — but you can still showcase your work.
 Upload a screen recording to YouTube, Loom, or Google Drive, then paste the link below:
 
-👉 Demo Video: [Add your link here]
+👉 Demo Video: [[Add your link here]](https://www.loom.com/share/fdbc3eec0dfd4160b7d055cddf5cb041)
 
 ## 🧩 1. Project Summary
 
